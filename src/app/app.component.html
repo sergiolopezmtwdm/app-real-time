@@ -2,7 +2,12 @@
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <navigation-sidebar></navigation-sidebar>
+  <navigation-sidebar
+    mainIconMenu="fa-user"
+    subtitleMenu="101"
+    titleMenu="MTWDM"
+    [menuItems] = "sidebarItems">
+  </navigation-sidebar>
   <!-- /sidebar -->
 
   <!-- Content Wrapper -->
@@ -21,7 +26,9 @@
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
-
+        <!-- <pre>
+            {{sidebarItems | json}}
+        </pre> -->
         <pre>
           {{menuItems | json}}
         </pre>

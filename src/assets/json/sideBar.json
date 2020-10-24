@@ -1,0 +1,76 @@
+[
+  {
+    "section": "",
+    "title": "Dashboard",
+    "icon": "fa-tachometer-alt",
+    "items":[]
+  },
+  {
+    "section": "Interface",
+    "title": "Componentes",
+    "icon": "fa-cog",
+    "items":[
+      {
+        "subTitle":"Custom Components",
+        "subItems":[
+          {
+            "title": "Buttons",
+            "icon": ""
+          },
+          {
+            "title": "Cards",
+            "icon": ""
+          }
+        ]
+      },
+      {
+        "subTitle":"Facturas",
+        "subItems":[
+          {
+            "title": "Busqueda",
+            "icon": ""
+          },
+          {
+            "title": "Cancelación",
+            "icon": ""
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "section": "Components",
+    "title": "Login",
+    "icon": "fa-group",
+    "items":[
+      {
+        "subTitle":"Recovery Password",
+        "subItems":[
+          {
+            "title": "Reset",
+            "icon": ""
+          },
+          {
+            "title": "Change",
+            "icon": ""
+          }
+        ]
+      },
+      {
+        "subTitle":"SING UP",
+        "subItems":[
+          {
+            "title": "oAuth",
+            "icon": ""
+          },
+          {
+            "title": "LogOut",
+            "icon": ""
+          }
+        ]
+      }
+
+    ]
+  }
+]

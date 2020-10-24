@@ -3,13 +3,42 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
       <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+        <i class="fas {{mainIconMenu}}"></i>
+        <!-- fa-laugh-wink -->
       </div>
-      <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+      <div class="sidebar-brand-text mx-3">{{titleMenu}} <sup>{{subtitleMenu}}</sup></div>
     </a>
+
+    <!-- <pre>
+      {{menuItems | json}}
+    </pre> -->
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
+
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item" *ngFor="let item of menuItems; let i = index">
+  <a *ngIf="item.items.length == 0" class="nav-link" href="index.html">
+    <i class="fas fa-fw {{item.icon}}"></i>
+    <span>{{item.title}}</span>
+  </a>
+
+  <a *ngIf="item.items.length > 0" class="nav-link collapsed" href="#"
+    data-toggle="collapse" att.data-target="#collapse{{i}}" aria-expanded="true"
+    aria-controls="#collapse{{i}}">
+    <i class="fas fa-fw {{item.icon}}"></i>
+    <span>{{item.title}}</span>
+  </a>
+  <div *ngIf="item.items.length > 0" id="collapse{{i}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div *ngFor="let subitem of item.items" class="bg-white py-2 collapse-inner rounded">
+      <h6 class="collapse-header">{{subitem.subTitle}}:</h6>
+      <a *ngFor="let child of subitem.subItems" class="collapse-item" href="buttons.html">{{child.title}}</a>
+    </div>
+  </div>
+</li>
+<!-- /nav Item - Pages Collapse Menu -->
+
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
