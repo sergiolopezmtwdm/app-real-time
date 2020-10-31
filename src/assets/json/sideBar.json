@@ -15,11 +15,13 @@
         "subItems":[
           {
             "title": "Buttons",
-            "icon": ""
+            "icon": "",
+            "route": ["components/buttons"]
           },
           {
             "title": "Cards",
-            "icon": ""
+            "icon": "",
+            "route": ["components/cards"]
           }
         ]
       },
@@ -28,11 +30,13 @@
         "subItems":[
           {
             "title": "Busqueda",
-            "icon": ""
+            "icon": "",
+            "route": ["components/busqueda"]
           },
           {
             "title": "Cancelación",
-            "icon": ""
+            "icon": "",
+            "route": ["components/cancelacion"]
           }
         ]
       }
@@ -49,11 +53,13 @@
         "subItems":[
           {
             "title": "Reset",
-            "icon": ""
+            "icon": "",
+            "route": ""
           },
           {
             "title": "Change",
-            "icon": ""
+            "icon": "",
+            "route": ""
           }
         ]
       },
@@ -62,11 +68,13 @@
         "subItems":[
           {
             "title": "oAuth",
-            "icon": ""
+            "icon": "",
+            "route": ""
           },
           {
             "title": "LogOut",
-            "icon": ""
+            "icon": "",
+            "route": ""
           }
         ]
       }
