@@ -1,0 +1,40 @@
+<h1>Paises</h1>
+<!-- {(paisesList | json)} -->
+<!-- {{paisesList | json}} -->
+
+<div class="row">
+  <div class="col-md3-3">
+    <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+      <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" #textCriterio>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="searchCriterio(textCriterio.value)">
+            <i class="fas fa-search fa-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md3-3" *ngFor="let item of paisesList">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" [src]="item.flag" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}} <smal>{{item.capital}}</smal></h5>
+        <p class="card-text">
+          <b>Región: </b>{{item.region}}<br>
+          <b>Sub-Región: </b>{{item.subregion}}<br>
+          <b>Población: </b>{{item.population | number}}<br>
+        </p>
+      </div>
+      <div class="card-footer">
+        Coordenadas:
+        <small class="text-muted" *ngFor="let coord of item.latlng">
+          {{coord}}
+        </small>
+        <a href="#" class="btn btn-primary">Ver Mapa</a>
+      </div>
+    </div>
+  </div>
+</div>

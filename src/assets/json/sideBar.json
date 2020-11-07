@@ -3,6 +3,14 @@
     "section": "",
     "title": "Dashboard",
     "icon": "fa-tachometer-alt",
+    "route":[],
+    "items":[]
+  },
+  {
+    "section": "",
+    "title": "Paises",
+    "icon": "fa-flag",
+    "route": "components/paises",
     "items":[]
   },
   {

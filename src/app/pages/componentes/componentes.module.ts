@@ -6,11 +6,12 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { CancelacionComponent } from './cancelacion/cancelacion.component';
 import { ComponentesRouterModule } from './componentes.routes';
+import { PaisesComponent } from './paises/paises.component';
 
 
 
 @NgModule({
-  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent],
+  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent, PaisesComponent],
   imports: [
     CommonModule,
     ComponentesRouterModule
