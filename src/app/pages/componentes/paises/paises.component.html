@@ -3,6 +3,18 @@
 <!-- {{paisesList | json}} -->
 
 <div class="row">
+  <div class="col-md-12">
+    <ng-select [items]="defaultBindingsList"
+      (change)="onChangeRegion()"
+      [(ngModel)]="selectedCRegion">
+    </ng-select>
+  </div>
+  <pre>
+    {{selectedCRegion | json}}
+  </pre>
+</div>
+
+<div class="row">
   <div class="col-md3-3">
     <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
       <div class="input-group">
@@ -33,7 +45,7 @@
         <small class="text-muted" *ngFor="let coord of item.latlng">
           {{coord}}
         </small>
-        <a href="#" class="btn btn-primary">Ver Mapa</a>
+        <a [routerLink]="['/components/pais-detail', item.alpha3Code]" class="btn btn-primary">Ver Detalle</a>
       </div>
     </div>
   </div>

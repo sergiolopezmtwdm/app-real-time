@@ -10,6 +10,14 @@ export class PaisesService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Get All Countries
+   */
+  getAllPaises(){
+    return this.http.get(`${END_POINT}/all`);
+    //return this.http.get(END_POINT+'/all');
+  }
+
 /**
  *
  * @param region => Africa, America, Asia, Europe, Oceania
@@ -23,6 +31,14 @@ export class PaisesService {
   getPaisesByName(name: string){
     return this.http.get(`${END_POINT}/name/${name}`);
     // return this.http.get(END_POINT+'/name/'+name);
+  }
+
+  /**
+   *
+   * @param code
+   */
+  getPaisByCode(code: string){
+    return this.http.get(`${END_POINT}/alpha/${code}`);
   }
 }
 

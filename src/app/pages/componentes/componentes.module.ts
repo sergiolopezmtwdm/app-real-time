@@ -8,11 +8,15 @@ import { CancelacionComponent } from './cancelacion/cancelacion.component';
 import { ComponentesRouterModule } from './componentes.routes';
 import { PaisesComponent } from './paises/paises.component';
 
-
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { PaisDetailComponent } from './pais-detail/pais-detail.component';
 
 @NgModule({
-  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent, PaisesComponent],
+  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent, PaisesComponent, PaisDetailComponent],
   imports: [
+    NgSelectModule,
+    FormsModule,
     CommonModule,
     ComponentesRouterModule
   ]
